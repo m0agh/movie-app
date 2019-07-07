@@ -1,0 +1,23 @@
+@import './variables';
+
+html {
+  font-size: 62.5%; /* with the standard base font size of 16px this will be equal to 10px */
+}
+body {
+  font-size: 160%; /* 160% of 10px ~ 16px, understood by all browsers */
+  font-size: 1.6rem; /* 1.6 * 10px ~ 16px, understood by all major browsers and IE9+ */
+  margin: 0;
+  padding: 0;
+  background: $blue;
+  box-sizing: border-box;
+  font-family: -apple-system, 'BlinkMacSystemFont', '.SFNSDisplay-Regular',
+    'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande',
+    sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  font-family: inherit;
+}
