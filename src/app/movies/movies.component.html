@@ -1,1 +1,38 @@
-<p>movies works!</p>
+<div class="search-bar">
+  <img src="assets/icons/search.svg" alt="search icon">
+  <input [(ngModel)]="searchText" name="searchText" type="search" placeholder="Search" aria-label="Search">
+</div>
+<div class="main-container">
+<div class="genres-list">
+  <span class="title">genres</span>
+  <hr>
+  <ul class="genre-list-items">
+  </ul>
+</div>
+<div *ngIf="movies" class="movies-container">
+  <div class="movies-list-header">
+    <span class="count">
+      {{movies.length}} Movies
+    </span>
+    <div class="sort">
+      SORT BY:
+      <select [(ngModel)]="sortBy">
+        <option value="rate">Rate</option>
+        <option value="id">Lastest</option>
+      </select>
+    </div>
+  </div>
+  <hr>
+  <div class="movies-list">
+    <div *ngFor="let movie of movies" class="movie">
+      <a [routerLink]="['/movies/' + movie.id + '/' + movie.key]">
+        <figure>
+          <img src="assets/movies/{{movie.img}}">
+        </figure>
+        <span class="title">{{movie.name}}</span>
+        <span class="rate">{{movie.rate}}</span>
+      </a>
+    </div>
+  </div>
+</div>
+</div>

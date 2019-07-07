@@ -12,14 +12,16 @@ export class MoviesComponent implements OnInit {
   movies: Movie[] = null;
   visibleMovies: Movie[] = null;
 
+  searchText: any = '';
+  sortBy: any = 'id';
+
   constructor(private moviesRepositoryService: MoviesRepositoryService) { }
 
   ngOnInit() {
     this.moviesRepositoryService.getMovies()
-    .subscribe(movies => console.log(movies));
-
-    this.moviesRepositoryService.getMovieById(1)
-    .subscribe(movie => console.log(movie));
+    .subscribe(movies => {
+      this.movies = movies;
+    });
   }
 
 }

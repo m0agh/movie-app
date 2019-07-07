@@ -3,3 +3,18 @@ $grey: #f3f3f3;
 $blue: #182B54;
 $lightBlue: #00B5E9;
 $light: #ffffff;
+$dark: #000000;
+$yellow: #FFB11A;
+
+
+$primary-color: $blue;
+$primary-color-dark: darken($primary-color, 8);
+$primary-color-light: lighten($primary-color, 10);
+$secondary-color: $pink;
+
+$primary-link: $blue;
+$secondary-link: $lightBlue;
+
+$primary-title: $light;
+$secondary-title: $yellow;
+
