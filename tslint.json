@@ -27,8 +27,9 @@
     ],
     "interface-name": false,
     "max-classes-per-file": false,
+    "_comment": "TODO: enable this rule to avoid long lines!",
     "max-line-length": [
-      true,
+      false,
       140
     ],
     "member-access": false,
