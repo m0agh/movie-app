@@ -8,6 +8,7 @@ import { MoviesRepositoryService } from './services/movies-repository.service';
 import { SharedModule } from '../shared/shared.module';
 import { EnumToArrayPipe } from './pipes/enumToArray.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
+import { SortPipe } from './pipes/sort.pipe';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { FilterPipe } from './pipes/filter.pipe';
   declarations: [
     MoviesComponent,
     EnumToArrayPipe,
-    FilterPipe
+    FilterPipe,
+    SortPipe
   ],
   exports: [ ],
   providers: [

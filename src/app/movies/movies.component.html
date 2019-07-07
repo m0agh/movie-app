@@ -33,7 +33,7 @@
   </div>
   <hr>
   <div class="movies-list">
-    <div *ngFor="let movie of movies | filter: searchText" class="movie">
+    <div *ngFor="let movie of movies | filter: searchText | sort: sortBy" class="movie">
       <a [routerLink]="['/movies/' + movie.id + '/' + movie.key]">
         <figure>
           <img src="assets/movies/{{movie.img}}">
