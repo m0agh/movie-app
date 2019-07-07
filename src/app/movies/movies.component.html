@@ -21,7 +21,7 @@
 <div *ngIf="movies" class="movies-container">
   <div class="movies-list-header">
     <span class="count">
-      {{movies.length}} Movies
+      {{visibleMovies.length}} Movies
     </span>
     <div class="sort">
       SORT BY:
@@ -33,7 +33,7 @@
   </div>
   <hr>
   <div class="movies-list">
-    <div *ngFor="let movie of movies | filter: searchText | sort: sortBy" class="movie">
+    <div *ngFor="let movie of visibleMovies | filter: searchText | sort: sortBy" class="movie">
       <a [routerLink]="['/movies/' + movie.id + '/' + movie.key]">
         <figure>
           <img src="assets/movies/{{movie.img}}">

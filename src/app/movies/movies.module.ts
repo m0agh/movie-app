@@ -9,6 +9,7 @@ import { SharedModule } from '../shared/shared.module';
 import { EnumToArrayPipe } from './pipes/enumToArray.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { SortPipe } from './pipes/sort.pipe';
+import { FilterMoviesService } from './services/filter-movies.service';
 
 @NgModule({
   imports: [
@@ -28,7 +29,8 @@ import { SortPipe } from './pipes/sort.pipe';
   exports: [ ],
   providers: [
     HttpClientModule,
-    MoviesRepositoryService
+    MoviesRepositoryService,
+    FilterMoviesService
   ]
 })
 export class MoviesModule { }
