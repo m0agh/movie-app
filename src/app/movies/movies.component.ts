@@ -7,11 +7,15 @@ import { Movie } from './models/movie.model';
 import { Genre } from './models/genre.model';
 import { MoviesRepositoryService } from './services/movies-repository.service';
 import { FilterMoviesService } from './services/filter-movies.service';
+import { FadeIn } from '../shared/animations';
 
 @Component({
   selector: 'app-movies',
   templateUrl: './movies.component.html',
-  styleUrls: ['./movies.component.scss']
+  styleUrls: ['./movies.component.scss'],
+  animations: [
+    FadeIn
+  ]
 })
 export class MoviesComponent implements OnInit {
   movies: Movie[] = null;

@@ -18,7 +18,8 @@
     </li>
   </ul>
 </div>
-<div *ngIf="movies" class="movies-container">
+<app-loading-spinner [loading]="!visibleMovies"></app-loading-spinner>
+<div *ngIf="visibleMovies" class="movies-container" [@simpleFadeAnimation]="'in'">
   <div class="movies-list-header">
     <span class="count">
       {{visibleMovies.length}} Movies

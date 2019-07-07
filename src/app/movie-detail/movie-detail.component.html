@@ -1,4 +1,6 @@
-<div class="movie-info-container" *ngIf="movie">
+<app-loading-spinner [loading]="!movie"></app-loading-spinner>
+
+<div class="movie-info-container" *ngIf="movie" [@simpleFadeAnimation]="'in'">
   <div class="movie-banner-cover">
     <img src="assets/movies/{{movie.cover}}" alt="">
   </div>
