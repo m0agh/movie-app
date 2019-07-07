@@ -1,4 +1,5 @@
 export enum Genre {
+  All = 'all',
   Action = 'action',
   Adventure = 'adventure',
   Biography = 'biography',

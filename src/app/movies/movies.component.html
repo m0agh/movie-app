@@ -7,6 +7,15 @@
   <span class="title">genres</span>
   <hr>
   <ul class="genre-list-items">
+    <li *ngFor="let genre of genres | enumToArray">
+      <a
+        [ngClass]="{'active': genre.toLowerCase() == selectedGenre}"
+        [routerLink]="['/movies/']"
+        [queryParams]="{filter:genre.toLowerCase()}"
+        (click)="changeFilter($event)">
+        {{genre}}
+      </a>
+    </li>
   </ul>
 </div>
 <div *ngIf="movies" class="movies-container">
@@ -24,7 +33,7 @@
   </div>
   <hr>
   <div class="movies-list">
-    <div *ngFor="let movie of movies" class="movie">
+    <div *ngFor="let movie of movies | filter: searchText" class="movie">
       <a [routerLink]="['/movies/' + movie.id + '/' + movie.key]">
         <figure>
           <img src="assets/movies/{{movie.img}}">

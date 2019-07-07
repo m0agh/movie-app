@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { MoviesComponent } from './movies.component';
 import { MoviesRepositoryService } from './services/movies-repository.service';
 import { SharedModule } from '../shared/shared.module';
+import { EnumToArrayPipe } from './pipes/enumToArray.pipe';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   imports: [
@@ -16,7 +18,11 @@ import { SharedModule } from '../shared/shared.module';
     ]),
     FormsModule
    ],
-  declarations: [ MoviesComponent ],
+  declarations: [
+    MoviesComponent,
+    EnumToArrayPipe,
+    FilterPipe
+  ],
   exports: [ ],
   providers: [
     HttpClientModule,

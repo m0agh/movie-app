@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Movie } from './models/movie.model';
+import { Genre } from './models/genre.model';
 import { MoviesRepositoryService } from './services/movies-repository.service';
 
 @Component({
@@ -14,6 +15,9 @@ export class MoviesComponent implements OnInit {
 
   searchText: any = '';
   sortBy: any = 'id';
+
+  public genres = Genre;
+  selectedGenre = 'all';
 
   constructor(private moviesRepositoryService: MoviesRepositoryService) { }
 
