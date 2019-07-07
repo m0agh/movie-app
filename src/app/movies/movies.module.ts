@@ -10,13 +10,15 @@ import { EnumToArrayPipe } from './pipes/enumToArray.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { SortPipe } from './pipes/sort.pipe';
 import { FilterMoviesService } from './services/filter-movies.service';
+import { MovieDetailComponent } from '../movie-detail/movie-detail.component';
 
 @NgModule({
   imports: [
     HttpClientModule,
     SharedModule,
     RouterModule.forChild([
-      { path: 'movies', component: MoviesComponent }
+      { path: 'movies', component: MoviesComponent },
+      { path: 'movies/:id/:title', component: MovieDetailComponent }
     ]),
     FormsModule
    ],

@@ -1,0 +1,26 @@
+<div class="movie-info-container" *ngIf="movie">
+  <div class="movie-banner-cover">
+    <img src="assets/movies/{{movie.cover}}" alt="">
+  </div>
+  <div class="movie-detail-container">
+    <div class="movie-cover">
+      <img src="assets/movies/{{movie.img}}" alt="">
+    </div>
+    <div class="movie-detail">
+      <h2>{{movie.name}}</h2>
+      <div class="short-info">
+        <div class="rate"><span>rate: <strong>{{movie.rate}}</strong></span></div>
+        <div class="duration"><span>length: <strong>{{movie.length}}</strong></span></div>
+        <div class="genres">
+          <span>genres:</span>
+          <a *ngFor="let genre of movie.genres" [routerLink]="['/movies/']" [queryParams]="{filter:genre}">
+            {{genre}}
+          </a>
+        </div>
+      </div>
+      <p class="desc">
+        {{movie.description}}
+      </p>
+    </div>
+  </div>
+</div>

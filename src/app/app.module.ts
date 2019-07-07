@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { MoviesModule } from './movies/movies.module';
 import { appRoutes } from './routes';
+import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { appRoutes } from './routes';
     MoviesModule
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+    MovieDetailComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
