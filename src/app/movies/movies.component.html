@@ -37,7 +37,7 @@
     <div *ngFor="let movie of visibleMovies | filter: searchText | sort: sortBy" class="movie">
       <a [routerLink]="['/movies/' + movie.id + '/' + movie.key]">
         <figure>
-          <img src="assets/movies/{{movie.img}}">
+          <img src="assets/movies/{{movie.img}}" alt="movie poster">
         </figure>
         <span class="title">{{movie.name}}</span>
         <span class="rate">{{movie.rate}}</span>
