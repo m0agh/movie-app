@@ -175,3 +175,41 @@
     }
   }
 }
+
+@media only screen and (max-width : 48em) {
+  .main-container{
+    flex-direction: column;
+
+    .genres-list{
+      width: 100%;
+      height: auto;
+      padding: 0.8em;
+    }
+    .genre-list-items{
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      margin: 0;
+
+      li{
+        margin-right: 1em;
+      }
+    }
+
+    .movies-container{
+      width: 100%;
+
+      .movie{
+        flex-basis: 50%!important;
+        justify-content: space-between;
+      }
+      figure{
+        img{
+          max-width: 8em;
+        }
+      }
+    }
+  }
+}

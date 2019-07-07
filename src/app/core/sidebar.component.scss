@@ -34,4 +34,8 @@
       max-width: 1.5em;
     }
   }
+
+  @media only screen and (max-width : 48em) {
+    width: 50px;
+  }
 }

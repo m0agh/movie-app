@@ -76,3 +76,32 @@
     line-height: 1.8;
   }
 }
+
+@media only screen and (max-width : 48em) {
+  .movie-detail-container{
+    flex-direction: column-reverse;
+    transform: translateY(0);
+    padding: 0 0.5em;
+
+    .movie-cover{
+      padding: 0 1em;
+    }
+    .short-info{
+      flex-direction: column;
+
+      div {
+        margin-right: 0;
+        margin-bottom: 1em;
+      }
+    }
+    .genres{
+      span{
+        display: block;
+        margin-bottom: 1em;
+      }
+    }
+    .desc{
+      max-width: 100%;
+    }
+  }
+}
